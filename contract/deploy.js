@@ -5,7 +5,6 @@ import { prepareSubscriptionContract } from '../contract/src/subscription.js';
 import { prepareMarketplaceContract } from '../contract/src/marketplace.js';
 
 export default async function deploy(homeP, { bundleSource, pathResolve }) {
-  // Setup contract deployment
   const userRegistry = prepareUserRegistryContract();
   const nftContract = prepareNFTContract();
   const subscriptionContract = prepareSubscriptionContract();
