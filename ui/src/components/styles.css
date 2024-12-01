@@ -1,0 +1,138 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 10px;
+  position: relative; /* To position the "De Edge" text properly */
+}
+
+/* Main Container */
+.form-container {
+  background: linear-gradient(145deg, #63b3c2, #b6d9df);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  z-index: 10; /* Ensure the form is above the animated text */
+}
+
+.form-container:hover {
+  transform: translateY(-10px);
+}
+
+/* Header Styling */
+h2 {
+  font-size: 24px;
+  color: #003b45;
+  margin-bottom: 20px;
+  font-weight: bold;
+  position: relative;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #007a8d;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+  color: black;
+}
+
+input:focus {
+  border-color: #025e6f;
+  outline: none;
+}
+
+/* Submit Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007a8d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #025e6f;
+}
+
+/* Links */
+a {
+  color: #007a8d;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #025e6f;
+}
+
+/* Animation for Text */
+
+@keyframes textAnimation {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateX(-50%) translateY(20px) scale(1.5); /* Move the text downward and scale */
+  }
+}
+
+/* Hover effect on Form Container */
+.form-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover Effect on Inputs */
+input:hover {
+  border-color: #025e6f;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,250 @@
+/* Home.css */
+
+/* General background and font styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  margin-top: 60px; /* Add space for fixed navbar */
+}
+
+/* Navbar Styling */
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: #f1f1f1 !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffd700 !important;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background-color: #181818;
+  height: 100vh; /* Full height */
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 80px; /* Space for the navbar */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+
+.sidebar h4 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.sidebar .nav-link {
+  color: #d1d1d1;
+  font-size: 1.1rem;
+}
+
+.sidebar .nav-link:hover {
+  color: #ffd700;
+  background-color: #333;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+/* Main Content Styling */
+.main-content {
+  margin-left: 250px; /* Ensure the content is next to the sidebar */
+  padding-top: 60px; /* Ensure content is below the navbar */
+}
+
+/* Apply smooth scale transformation and subtle shadows to the cards */
+
+/* Animation for Background Gradient */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Footer Styling */
+footer {
+  background-color: #181818;
+  color: #f1f1f1;
+  font-size: 1rem;
+}
+
+footer p {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+/* General Container Styles */
+.custom-card {
+  border-radius: 15px;
+  background-color: #2d2d2d;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-shadow {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Hover Effect */
+.custom-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.custom-card .card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.activity-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.activity-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.activity-list li i {
+  margin-right: 10px;
+}
+
+.news-card {
+  background-color: #333;
+  border: none;
+}
+
+.news-card .card-body {
+  padding: 15px;
+}
+
+.news-card .card-title {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.news-card .card-text {
+  color: #ddd;
+}
+
+.news-card img {
+  border-radius: 10px;
+}
+
+.button {
+  border: none;
+  outline: none;
+}
+
+.custom-card .btn-outline-light:hover {
+  color: #2d2d2d;
+  background-color: #fff;
+}
+
+.activity-card {
+  background-color: #2d2d2d;
+}
+
+.activity-card .card-title {
+  font-size: 1.5rem;
+}
+
+.activity-card .activity-list li {
+  color: #ddd;
+}
+
+/* Spacing */
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.g-4 {
+  gap: 1.5rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+/* Flexbox Layout for Columns */
+@media (max-width: 768px) {
+  .left-section {
+    order: 1;
+  }
+
+  .right-section {
+    order: 2;
+  }
+}
+
+.category-item {
+  width: 150px;
+  height: 90px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.category-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-item h5 {
+  font-weight: bold;
+  color: #333;
+}
+
+.category-item i {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, #ececec, #f9f9f9);
+}
