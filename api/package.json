@@ -1,5 +1,11 @@
 {
   "$note": "@agoric/create-dapp@0.1.0 expects an api/package.json",
   "name": "Hack_Application-api",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "dependencies": {
+    "@agoric/eventual-send": "^0.14.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.3"
+  }
 }
