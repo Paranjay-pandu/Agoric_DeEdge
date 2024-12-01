@@ -1,40 +1,74 @@
-# Agoric Dapp Starter: Offer Up
+# DeEdge :  A Decentralized Subscription-Based Content Management Platform
 
-Offer Up is a simple Dapp for the [Agoric smart contract platform](https://docs.agoric.com/) that permits users to explore items for sale in a marketplace, displaying default options of maps, potions, and scrolls. Users can select up to three items in any combination, create an offer starting from 0.25 [IST](https://agoric.com/blog/getting-started/ist), and upon transaction confirmation, receive the chosen items in their wallet while the offered amount is deducted from their balance.
+## Overview
+Welcome to the **DeEdge**! This project is designed to allow users to explore, manage, and interact with their NFTs (Non-Fungible Tokens) collections. The platform features a modern, visually appealing interface with smooth transitions, a blockchain-inspired color theme, and robust functionalities for managing NFTs.
 
-<div style="display: flex; align-items: center; justify-content: center; height: 300;">
-    <img src="https://docs.agoric.com/assets/new_002_small2.DgAL2zV8.png" alt="Offer Up Dapp" style="display: block; margin: auto;">
-</div>
+The platform is built using **Agoric**, a framework for building secure smart contracts and decentralized applications. Agoric allows us to implement blockchain-based features like NFTs with minimal risk, leveraging secure JavaScript-based smart contracts.
 
-## Getting started
+## Features
+- **Categories**: Explore NFTs across various categories, including Art, Music, Gaming, and Collectibles.
+- **NFT Management**: View, manage, and explore NFTs stored on the blockchain.
+- **Responsive Design**: The platform is fully responsive, ensuring a seamless experience across devices (desktop, tablet, mobile).
+- **Blockchain Theme**: The UI is designed with a blockchain-inspired color scheme, using gradients and vibrant colors like aqua, violet, and indigo.
+- **Agoric Integration**: Utilizes Agoric's secure smart contracts to manage blockchain interactions.
 
-Detailed instructions regarding setting up the environment with a video walkthrough is available at [Your First Agoric Dapp](https://docs.agoric.com/guides/getting-started/) tutorial. But if you have the environment set, i.e., have correct version of node, yarn, docker, and Keplr wallet installed, below are the steps that you need to follow. *You can also use the same instructions to follow along in Github Codespaces without any installation or downloads on your local machine, apart from Keplr which is needed to connect to dApp.*
-- run the `yarn install` command to install any solution dependencies. *Downloading all the required dependencies may take several minutes. The UI depends on the React framework, and the contract depends on the Agoric framework. The packages in this project also have development dependencies for testing, code formatting, and static analysis.*
-- start a local Agoric blockchain using the `yarn start:docker` command.
-- run `yarn docker:logs` to check the logs. Once your logs resemble the following, stop the logs by pressing `ctrl+c`.
+## Technologies Used
+- **React**: A JavaScript library for building user interfaces.
+- **React-Bootstrap**: A React component library that implements the Bootstrap framework for UI elements.
+- **React Icons**: Used for adding icons to the UI for a better visual experience.
+- **CSS**: Custom CSS for styling and layout adjustments.
+- **React Spring**: For animations, including hover effects.
+- **Agoric**: A framework for writing and deploying secure smart contracts on the blockchain, enabling NFT management and interactions.
+
+## Setup
+
+To run the project locally, follow these steps:
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Paranjay-pandu/Agoric_DeEdge.git
 ```
-demo-agd-1  | 2023-12-27T04:08:06.384Z block-manager: block 1003 begin
-demo-agd-1  | 2023-12-27T04:08:06.386Z block-manager: block 1003 commit
-demo-agd-1  | 2023-12-27T04:08:07.396Z block-manager: block 1004 begin
-demo-agd-1  | 2023-12-27T04:08:07.398Z block-manager: block 1004 commit
-demo-agd-1  | 2023-12-27T04:08:08.405Z block-manager: block 1005 begin
-demo-agd-1  | 2023-12-27T04:08:08.407Z block-manager: block 1005 commit
+
+### 2. Install dependencies
+Navigate to the project directory and install the required dependencies using npm or yarn.
+
+```bash
+cd Agoric_DeEdge
+npm install
 ```
-- **Only if you are running this in a github codespace:** go to `PORTS` in bottom-right panel, and make all listed ports `public` by selecting `Port Visibility` after right-click.
-- run `yarn start:contract` to start the smart contract. 
-- run `yarn start:ui` to start the smart contract. You can use the link in the output to load the smart contract UI in a browser.
+or
 
-For any troubleshooting please refer to the detailed tutorial at [Here](https://docs.agoric.com/guides/getting-started/).
+```bash
 
-## Testing
+yarn install
+```
+### 3. Run the development server
+Once the dependencies are installed, run the app locally.
 
-To run the unit test:
-- run `yarn test` to run the unit tests
+```bash
+npm start
+```
+or
 
-To run the end to end test:
-- run `yarn test:e2e --browser chrome` to run the end to end tests; you may replace `chrome` with your favorite browser name. Although `chrome` is the recommended browser to run end to end tests at this point.
+```bash
+yarn start
+```
+The application will be available at http://localhost:3000.
 
 
-## Contributing
+### Customization
+Colors: Modify the color scheme in the background property of the NFT card to change the gradient to fit your preferred theme.
+Images: Replace the placeholder image URLs with actual NFT images to showcase your collection.
+Icons: Feel free to change or add more icons using the React Icons library.
+Future Features
+User Authentication: Implement login, registration, and profile management.
+Blockchain Integration: Integrate with real-world blockchain technologies to fetch NFTs and manage wallets using Agoric.
+Responsive Enhancements: Further optimize the UI for various screen sizes.
+Contributing
+We welcome contributions to this project! If you'd like to contribute, please fork the repository and create a pull request. Be sure to follow the code of conduct and the contribution guidelines.
 
-See [CONTRIBUTING](./CONTRIBUTING.md) for more on contributing to this repo.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+This version includes the integration with **Agoric** and emphasizes its role in the platform. Feel free to adjust the content further based on the specifics of your project.
