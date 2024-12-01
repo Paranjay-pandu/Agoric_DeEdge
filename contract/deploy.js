@@ -1,19 +1,20 @@
-const deployContract = async (homeP, { bundleSource, pathResolve }) => {
-    const { zoe, wallet } = homeP;
-    const bundle = await bundleSource(pathResolve('./src/multiChainContract.js'));
-    const installation = await E(zoe).install(bundle);
-    console.log('Contract installed at:', installation.getInstallation());
-  
-    const terms = {};
-    const issuerKeywordRecord = {};
-    const { instance, publicFacet } = await E(zoe).startInstance(
-      installation,
-      issuerKeywordRecord,
-      terms,
-    );
-    
-    console.log('Instance started at:', instance);
+import { E } from '@agoric/eventual-send';
+import { prepareUserRegistryContract } from '../contract/src/userRegistry.js';
+import { prepareNFTContract } from '../contract/src/nft.js';
+import { prepareSubscriptionContract } from '../contract/src/subscription.js';
+import { prepareMarketplaceContract } from '../contract/src/marketplace.js';
+
+export default async function deploy(homeP, { bundleSource, pathResolve }) {
+  // Setup contract deployment
+  const userRegistry = prepareUserRegistryContract();
+  const nftContract = prepareNFTContract();
+  const subscriptionContract = prepareSubscriptionContract();
+  const marketplaceContract = prepareMarketplaceContract();
+
+  return {
+    userRegistry,
+    nftContract,
+    subscriptionContract,
+    marketplaceContract
   };
-  
-  export default deployContract;
-  
+}
